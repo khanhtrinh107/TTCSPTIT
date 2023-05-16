@@ -21,7 +21,7 @@
 5.  Service Section
 6.  Categories Section
 7.  Featured Section
-8.  Latest Product Section
+8.  Latest Book Section
 9.  Contact
 10.  Footer Style
 -------------------------------------------------------------------*/
@@ -944,27 +944,27 @@ ol {
 }
 
 /*---------------------
-  Latest Product
+  Latest Book
 -----------------------*/
 
-.latest-product {
+.latest-Book {
 	padding-top: 80px;
 	padding-bottom: 0;
 }
 
-.latest-product__text h4 {
+.latest-Book__text h4 {
 	font-weight: 700;
 	color: #1c1c1c;
 	margin-bottom: 45px;
 }
 
-.latest-product__slider.owl-carousel .owl-nav {
+.latest-Book__slider.owl-carousel .owl-nav {
 	position: absolute;
 	right: 20px;
 	top: -75px;
 }
 
-.latest-product__slider.owl-carousel .owl-nav button {
+.latest-Book__slider.owl-carousel .owl-nav button {
 	height: 30px;
 	width: 30px;
 	background: #F3F6FA;
@@ -976,41 +976,41 @@ ol {
 	text-align: center;
 }
 
-.latest-product__slider.owl-carousel .owl-nav button span {
+.latest-Book__slider.owl-carousel .owl-nav button span {
 	font-weight: 700;
 }
 
-.latest-product__slider.owl-carousel .owl-nav button:last-child {
+.latest-Book__slider.owl-carousel .owl-nav button:last-child {
 	margin-right: 0;
 }
 
-.latest-product__item {
+.latest-Book__item {
 	margin-bottom: 20px;
 	overflow: hidden;
 	display: block;
 }
 
-.latest-product__item__pic {
+.latest-Book__item__pic {
 	float: left;
 	margin-right: 26px;
 }
 
-.latest-product__item__pic img {
+.latest-Book__item__pic img {
 	height: 110px;
 	width: 110px;
 }
 
-.latest-product__item__text {
+.latest-Book__item__text {
 	overflow: hidden;
 	padding-top: 10px;
 }
 
-.latest-product__item__text h6 {
+.latest-Book__item__text h6 {
 	color: #252525;
 	margin-bottom: 8px;
 }
 
-.latest-product__item__text span {
+.latest-Book__item__text span {
 	font-size: 18px;
 	display: block;
 	color: #252525;
@@ -1104,15 +1104,15 @@ ol {
 	display: block;
 }
 
-.sidebar__item .latest-product__text {
+.sidebar__item .latest-Book__text {
 	position: relative;
 }
 
-.sidebar__item .latest-product__text h4 {
+.sidebar__item .latest-Book__text h4 {
 	margin-bottom: 45px;
 }
 
-.sidebar__item .latest-product__text .owl-carousel .owl-nav {
+.sidebar__item .latest-Book__text .owl-carousel .owl-nav {
 	right: 0;
 }
 
@@ -1253,40 +1253,40 @@ ol {
   Shop Grid
 -----------------------*/
 
-.product {
+.Book {
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
 
-.product__discount {
+.Book__discount {
 	padding-bottom: 50px;
 }
 
-.product__discount__title {
+.Book__discount__title {
 	text-align: left;
 	margin-bottom: 65px;
 }
 
-.product__discount__title h2 {
+.Book__discount__title h2 {
 	display: inline-block;
 }
 
-.product__discount__title h2:after {
+.Book__discount__title h2:after {
 	margin: 0;
 	width: 100%;
 }
 
-.product__discount__item:hover .product__discount__item__pic .product__item__pic__hover {
+.Book__discount__item:hover .Book__discount__item__pic .Book__item__pic__hover {
 	bottom: 20px;
 }
 
-.product__discount__item__pic {
+.Book__discount__item__pic {
 	height: 270px;
 	position: relative;
 	overflow: hidden;
 }
 
-.product__discount__item__pic .product__discount__percent {
+.Book__discount__item__pic .Book__discount__percent {
 	height: 45px;
 	width: 45px;
 	background: #dd2222;
@@ -1300,7 +1300,7 @@ ol {
 	top: 15px;
 }
 
-.product__item__pic__hover {
+.Book__item__pic__hover {
 	position: absolute;
 	left: 0;
 	bottom: -50px;
@@ -1313,27 +1313,27 @@ ol {
 	transition: all, 0.5s;
 }
 
-.product__item__pic__hover li {
+.Book__item__pic__hover li {
 	list-style: none;
 	display: inline-block;
 	margin-right: 6px;
 }
 
-.product__item__pic__hover li:last-child {
+.Book__item__pic__hover li:last-child {
 	margin-right: 0;
 }
 
-.product__item__pic__hover li:hover a {
+.Book__item__pic__hover li:hover a {
 	background: #7fad39;
 	border-color: #7fad39;
 }
 
-.product__item__pic__hover li:hover a i {
+.Book__item__pic__hover li:hover a i {
 	color: #ffffff;
 	transform: rotate(360deg);
 }
 
-.product__item__pic__hover li a {
+.Book__item__pic__hover li a {
 	font-size: 16px;
 	color: #1c1c1c;
 	height: 40px;
@@ -1351,7 +1351,7 @@ ol {
 	transition: all, 0.5s;
 }
 
-.product__item__pic__hover li a i {
+.Book__item__pic__hover li a i {
 	position: relative;
 	transform: rotate(0);
 	-webkit-transition: all, 0.3s;
@@ -1361,49 +1361,49 @@ ol {
 	transition: all, 0.3s;
 }
 
-.product__discount__item__text {
+.Book__discount__item__text {
 	text-align: center;
 	padding-top: 20px;
 }
 
-.product__discount__item__text span {
+.Book__discount__item__text span {
 	font-size: 14px;
 	color: #b2b2b2;
 	display: block;
 	margin-bottom: 4px;
 }
 
-.product__discount__item__text h5 {
+.Book__discount__item__text h5 {
 	margin-bottom: 6px;
 }
 
-.product__discount__item__text h5 a {
+.Book__discount__item__text h5 a {
 	color: #1c1c1c;
 }
 
-.product__discount__item__text .product__item__price {
+.Book__discount__item__text .Book__item__price {
 	font-size: 18px;
 	color: #1c1c1c;
 	font-weight: 700;
 }
 
-.product__discount__item__text .product__item__price span {
+.Book__discount__item__text .Book__item__price span {
 	display: inline-block;
 	font-weight: 400;
 	text-decoration: line-through;
 	margin-left: 10px;
 }
 
-.product__discount__slider .col-lg-4 {
+.Book__discount__slider .col-lg-4 {
 	max-width: 100%;
 }
 
-.product__discount__slider.owl-carousel .owl-dots {
+.Book__discount__slider.owl-carousel .owl-dots {
 	text-align: center;
 	margin-top: 30px;
 }
 
-.product__discount__slider.owl-carousel .owl-dots button {
+.Book__discount__slider.owl-carousel .owl-dots button {
 	height: 12px;
 	width: 12px;
 	border: 1px solid #b2b2b2;
@@ -1411,12 +1411,12 @@ ol {
 	margin-right: 12px;
 }
 
-.product__discount__slider.owl-carousel .owl-dots button.active {
+.Book__discount__slider.owl-carousel .owl-dots button.active {
 	background: #707070;
 	border-color: #6f6f6f;
 }
 
-.product__discount__slider.owl-carousel .owl-dots button:last-child {
+.Book__discount__slider.owl-carousel .owl-dots button:last-child {
 	margin-right: 0;
 }
 
@@ -1526,21 +1526,21 @@ ol {
 	color: #7fad39;
 }
 
-.product__item {
+.Book__item {
 	margin-bottom: 50px;
 }
 
-.product__item:hover .product__item__pic .product__item__pic__hover {
+.Book__item:hover .Book__item__pic .Book__item__pic__hover {
 	bottom: 20px;
 }
 
-.product__item__pic {
+.Book__item__pic {
 	height: 270px;
 	position: relative;
 	overflow: hidden;
 }
 
-.product__item__pic__hover {
+.Book__item__pic__hover {
 	position: absolute;
 	left: 0;
 	bottom: -50px;
@@ -1553,27 +1553,27 @@ ol {
 	transition: all, 0.5s;
 }
 
-.product__item__pic__hover li {
+.Book__item__pic__hover li {
 	list-style: none;
 	display: inline-block;
 	margin-right: 6px;
 }
 
-.product__item__pic__hover li:last-child {
+.Book__item__pic__hover li:last-child {
 	margin-right: 0;
 }
 
-.product__item__pic__hover li:hover a {
+.Book__item__pic__hover li:hover a {
 	background: #7fad39;
 	border-color: #7fad39;
 }
 
-.product__item__pic__hover li:hover a i {
+.Book__item__pic__hover li:hover a i {
 	color: #ffffff;
 	transform: rotate(360deg);
 }
 
-.product__item__pic__hover li a {
+.Book__item__pic__hover li a {
 	font-size: 16px;
 	color: #1c1c1c;
 	height: 40px;
@@ -1591,7 +1591,7 @@ ol {
 	transition: all, 0.5s;
 }
 
-.product__item__pic__hover li a i {
+.Book__item__pic__hover li a i {
 	position: relative;
 	transform: rotate(0);
 	-webkit-transition: all, 0.3s;
@@ -1601,30 +1601,30 @@ ol {
 	transition: all, 0.3s;
 }
 
-.product__item__text {
+.Book__item__text {
 	text-align: center;
 	padding-top: 15px;
 }
 
-.product__item__text h6 {
+.Book__item__text h6 {
 	margin-bottom: 10px;
 }
 
-.product__item__text h6 a {
+.Book__item__text h6 a {
 	color: #252525;
 }
 
-.product__item__text h5 {
+.Book__item__text h5 {
 	color: #252525;
 	font-weight: 700;
 }
 
-.product__pagination,
+.Book__pagination,
 .blog__pagination {
 	padding-top: 10px;
 }
 
-.product__pagination a,
+.Book__pagination a,
 .blog__pagination a {
 	display: inline-block;
 	width: 30px;
@@ -1643,14 +1643,14 @@ ol {
 	transition: all, 0.3s;
 }
 
-.product__pagination a:hover,
+.Book__pagination a:hover,
 .blog__pagination a:hover {
 	background: #7fad39;
 	border-color: #7fad39;
 	color: #ffffff;
 }
 
-.product__pagination a:last-child,
+.Book__pagination a:last-child,
 .blog__pagination a:last-child {
 	margin-right: 0;
 }
@@ -1659,65 +1659,65 @@ ol {
   Shop Details
 -----------------------*/
 
-.product-details {
+.Book-details {
 	padding-top: 80px;
 }
 
-.product__details__pic__item {
+.Book__details__pic__item {
 	margin-bottom: 20px;
 }
 
-.product__details__pic__item img {
+.Book__details__pic__item img {
 	min-width: 100%;
 }
 
-.product__details__pic__slider img {
+.Book__details__pic__slider img {
 	cursor: pointer;
 }
 
-.product__details__pic__slider.owl-carousel .owl-item img {
+.Book__details__pic__slider.owl-carousel .owl-item img {
 	width: auto;
 }
 
-.product__details__text h3 {
+.Book__details__text h3 {
 	color: #252525;
 	font-weight: 700;
 	margin-bottom: 16px;
 }
 
-.product__details__text .product__details__rating {
+.Book__details__text .Book__details__rating {
 	font-size: 14px;
 	margin-bottom: 12px;
 }
 
-.product__details__text .product__details__rating i {
+.Book__details__text .Book__details__rating i {
 	margin-right: -2px;
 	color: #EDBB0E;
 }
 
-.product__details__text .product__details__rating span {
+.Book__details__text .Book__details__rating span {
 	color: #dd2222;
 	margin-left: 4px;
 }
 
-.product__details__text .product__details__price {
+.Book__details__text .Book__details__price {
 	font-size: 30px;
 	color: #dd2222;
 	font-weight: 600;
 	margin-bottom: 15px;
 }
 
-.product__details__text p {
+.Book__details__text p {
 	margin-bottom: 45px;
 }
 
-.product__details__text .primary-btn {
+.Book__details__text .primary-btn {
 	padding: 16px 28px 14px;
 	margin-right: 6px;
 	margin-bottom: 5px;
 }
 
-.product__details__text .heart-icon {
+.Book__details__text .heart-icon {
 	display: inline-block;
 	font-size: 16px;
 	color: #6f6f6f;
@@ -1725,45 +1725,45 @@ ol {
 	background: #f5f5f5;
 }
 
-.product__details__text ul {
+.Book__details__text ul {
 	border-top: 1px solid #ebebeb;
 	padding-top: 40px;
 	margin-top: 50px;
 }
 
-.product__details__text ul li {
+.Book__details__text ul li {
 	font-size: 16px;
 	color: #1c1c1c;
 	list-style: none;
 	line-height: 36px;
 }
 
-.product__details__text ul li b {
+.Book__details__text ul li b {
 	font-weight: 700;
 	width: 170px;
 	display: inline-block;
 }
 
-.product__details__text ul li span samp {
+.Book__details__text ul li span samp {
 	color: #dd2222;
 }
 
-.product__details__text ul li .share {
+.Book__details__text ul li .share {
 	display: inline-block;
 }
 
-.product__details__text ul li .share a {
+.Book__details__text ul li .share a {
 	display: inline-block;
 	font-size: 15px;
 	color: #1c1c1c;
 	margin-right: 25px;
 }
 
-.product__details__text ul li .share a:last-child {
+.Book__details__text ul li .share a:last-child {
 	margin-right: 0;
 }
 
-.product__details__quantity {
+.Book__details__quantity {
 	display: inline-block;
 	margin-right: 6px;
 }
@@ -1797,17 +1797,17 @@ ol {
 	display: inline-block;
 }
 
-.product__details__tab {
+.Book__details__tab {
 	padding-top: 85px;
 }
 
-.product__details__tab .nav-tabs {
+.Book__details__tab .nav-tabs {
 	border-bottom: none;
 	justify-content: center;
 	position: relative;
 }
 
-.product__details__tab .nav-tabs:before {
+.Book__details__tab .nav-tabs:before {
 	position: absolute;
 	left: 0;
 	top: 12px;
@@ -1817,7 +1817,7 @@ ol {
 	content: "";
 }
 
-.product__details__tab .nav-tabs:after {
+.Book__details__tab .nav-tabs:after {
 	position: absolute;
 	right: 0;
 	top: 12px;
@@ -1827,16 +1827,16 @@ ol {
 	content: "";
 }
 
-.product__details__tab .nav-tabs li {
+.Book__details__tab .nav-tabs li {
 	margin-bottom: 0;
 	margin-right: 65px;
 }
 
-.product__details__tab .nav-tabs li:last-child {
+.Book__details__tab .nav-tabs li:last-child {
 	margin-right: 0;
 }
 
-.product__details__tab .nav-tabs li a {
+.Book__details__tab .nav-tabs li a {
 	font-size: 16px;
 	color: #999999;
 	font-weight: 700;
@@ -1846,17 +1846,17 @@ ol {
 	padding: 0;
 }
 
-.product__details__tab .product__details__tab__desc {
+.Book__details__tab .Book__details__tab__desc {
 	padding-top: 44px;
 }
 
-.product__details__tab .product__details__tab__desc h6 {
+.Book__details__tab .Book__details__tab__desc h6 {
 	font-weight: 700;
 	color: #333333;
 	margin-bottom: 26px;
 }
 
-.product__details__tab .product__details__tab__desc p {
+.Book__details__tab .Book__details__tab__desc p {
 	color: #666666;
 }
 
@@ -1864,11 +1864,11 @@ ol {
   Shop Details
 -----------------------*/
 
-.related-product {
+.related-Book {
 	padding-bottom: 30px;
 }
 
-.related__product__title {
+.related__Book__title {
 	margin-bottom: 70px;
 }
 
@@ -1901,7 +1901,7 @@ ol {
 	padding-bottom: 20px;
 }
 
-.shoping__cart__table table thead th.shoping__product {
+.shoping__cart__table table thead th.shoping__Book {
 	text-align: left;
 }
 
@@ -2202,14 +2202,14 @@ ol {
 	margin-bottom: 20px;
 }
 
-.checkout__order .checkout__order__products {
+.checkout__order .checkout__order__Books {
 	font-size: 18px;
 	color: #1c1c1c;
 	font-weight: 700;
 	margin-bottom: 10px;
 }
 
-.checkout__order .checkout__order__products span {
+.checkout__order .checkout__order__Books span {
 	float: right;
 }
 
@@ -2923,13 +2923,13 @@ ol {
 	.hero__categories ul {
 		padding-left: 20px;
 	}
-	.latest-product__slider.owl-carousel .owl-nav {
+	.latest-Book__slider.owl-carousel .owl-nav {
 		right: 0;
 	}
-	.product__details__tab .nav-tabs:before {
+	.Book__details__tab .nav-tabs:before {
 		width: 265px;
 	}
-	.product__details__tab .nav-tabs:after {
+	.Book__details__tab .nav-tabs:after {
 		width: 265px;
 	}
 	.shoping__discount form input {
@@ -2956,16 +2956,16 @@ ol {
 		padding-left: 5px;
 		padding-right: 28px;
 	}
-	.product__details__quantity {
+	.Book__details__quantity {
 		margin-bottom: 10px;
 	}
-	.product__details__text .primary-btn {
+	.Book__details__text .primary-btn {
 		margin-bottom: 10px;
 	}
-	.product__details__tab .nav-tabs:before {
+	.Book__details__tab .nav-tabs:before {
 		width: 150px;
 	}
-	.product__details__tab .nav-tabs:after {
+	.Book__details__tab .nav-tabs:after {
 		width: 150px;
 	}
 	.blog__details__author {
@@ -3211,13 +3211,13 @@ ol {
 	.filter__option {
 		text-align: center;
 	}
-	.product__details__pic {
+	.Book__details__pic {
 		margin-bottom: 40px;
 	}
-	.product__details__tab .nav-tabs:before {
+	.Book__details__tab .nav-tabs:before {
 		display: none;
 	}
-	.product__details__tab .nav-tabs:after {
+	.Book__details__tab .nav-tabs:after {
 		display: none;
 	}
 	.shoping__cart__table {
@@ -3427,10 +3427,10 @@ ol {
 	.featured__controls ul li {
 		margin-bottom: 10px;
 	}
-	.product__details__text ul li b {
+	.Book__details__text ul li b {
 		width: 100px;
 	}
-	.product__details__tab .nav-tabs li {
+	.Book__details__tab .nav-tabs li {
 		margin-right: 20px;
 	}
 	.shoping__cart__btns {
@@ -3453,7 +3453,7 @@ ol {
 	.map .map-inside .inside-widget {
 		width: 250px;
 	}
-	.product__details__tab .nav-tabs li {
+	.Book__details__tab .nav-tabs li {
 		margin-right: 15px;
 	}
 	.shoping__discount form input {

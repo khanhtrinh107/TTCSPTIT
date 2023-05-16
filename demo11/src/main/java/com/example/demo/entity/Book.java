@@ -10,17 +10,17 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
-@Table(name = "product")
+@Table(name = "Book")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "product_id")
-    private Integer productId;
-    @Column(name = "product_name")
-    private String productName;
+    @Column(name = "Book_id")
+    private Integer BookId;
+    @Column(name = "Book_name")
+    private String BookName;
     private String price;
     private String image;
     private String description;
@@ -29,9 +29,9 @@ public class Product {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id")
     private Category category;
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "Book", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<OrderDetail> orderDetails;
-    @OneToMany(mappedBy = "product" , cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "Book" , cascade = CascadeType.ALL)
     private Set<Comment> comments;
 }

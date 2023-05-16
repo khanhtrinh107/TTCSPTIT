@@ -1,14 +1,14 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.Category;
-import com.example.demo.entity.Product;
+import com.example.demo.entity.Book;
 import com.example.demo.entity.dto.CartMessage;
 import com.example.demo.entity.dto.CategoryDto;
 import com.example.demo.entity.dto.CategoryView;
-import com.example.demo.entity.dto.ProductView;
+import com.example.demo.entity.dto.BookView;
 import com.example.demo.exception.ObjectExistedException;
 import com.example.demo.service.CategoryService;
-import com.example.demo.service.ProductService;
+import com.example.demo.service.BookService;
 import jakarta.validation.Valid;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.List;
 @RestController
 public class CategoryController {
     @Autowired
-    private ProductService productService;
+    private BookService BookService;
     @Autowired
     private CategoryService categoryService;
     @GetMapping("/category")
@@ -55,13 +55,13 @@ public class CategoryController {
         categoryService.delete(id);
         return new ResponseEntity<>(new CartMessage("delete successfully"),HttpStatus.OK);
     }
-    @GetMapping("/category/product/{id}")
-    public ResponseEntity<?> getProductByCategoryId(@PathVariable int id , @RequestParam(name = "page" , defaultValue = "1") int page , @RequestParam(name = "size" , defaultValue = "6") int size){
-        List<Product> list = productService.getProductByCategoryId(id , page, size).getContent();
-        int pageCount = productService.getProductByCategoryId(id , page, size).getTotalPages();
-        ProductView productView = new ProductView();
-        productView.setProductList(list);
-        productView.setPageCount(pageCount);
-        return new ResponseEntity<>(productView,HttpStatus.OK);
+    @GetMapping("/category/Book/{id}")
+    public ResponseEntity<?> getBookByCategoryId(@PathVariable int id , @RequestParam(name = "page" , defaultValue = "1") int page , @RequestParam(name = "size" , defaultValue = "6") int size){
+        List<Book> list = BookService.getBookByCategoryId(id , page, size).getContent();
+        int pageCount = BookService.getBookByCategoryId(id , page, size).getTotalPages();
+        BookView BookView = new BookView();
+        BookView.setBookList(list);
+        BookView.setPageCount(pageCount);
+        return new ResponseEntity<>(BookView,HttpStatus.OK);
     }
 }

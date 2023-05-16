@@ -1,9 +1,9 @@
 package com.example.demo.controller.view;
 
-import com.example.demo.entity.Product;
-import com.example.demo.entity.dto.ProductView;
+import com.example.demo.entity.Book;
+import com.example.demo.entity.dto.BookView;
 import com.example.demo.security.UserDetail;
-import com.example.demo.service.ProductService;
+import com.example.demo.service.BookService;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -20,7 +20,7 @@ public class HomeController {
     @Autowired
     private UserService userService;
     @Autowired
-    private ProductService productService;
+    private BookService BookService;
     @GetMapping("/view/home")
     public String view(){
         return "index";
@@ -39,7 +39,7 @@ public class HomeController {
             int userId = userService.findByUserName(res).getUserId();
             model.addAttribute("username" , res);
             model.addAttribute("userId" , userId);
-            model.addAttribute("productId" , id);
+            model.addAttribute("BookId" , id);
         }
         return "shop-details";
     }
@@ -78,10 +78,10 @@ public class HomeController {
     }
 
     @GetMapping("/view/search")
-    public String handleSearch(Model model , @RequestParam(name = "page" , required = false , defaultValue = "1") int page , @RequestParam(name = "size" ,required = false , defaultValue = "6") int size,@RequestParam(name = "domain" , required = false , defaultValue = "productId") String domain , @RequestParam(name = "dir" ,required = false , defaultValue = "asc") String dir , @RequestParam(name = "keyword" ,required = false , defaultValue = "") String keyword ){
-        List<Product> list = productService.searchByProductName(size,page,domain,dir,keyword).getContent();
+    public String handleSearch(Model model , @RequestParam(name = "page" , required = false , defaultValue = "1") int page , @RequestParam(name = "size" ,required = false , defaultValue = "6") int size,@RequestParam(name = "domain" , required = false , defaultValue = "BookId") String domain , @RequestParam(name = "dir" ,required = false , defaultValue = "asc") String dir , @RequestParam(name = "keyword" ,required = false , defaultValue = "") String keyword ){
+        List<Book> list = BookService.searchByBookName(size,page,domain,dir,keyword).getContent();
         System.out.println(list);
-        int pageCount = productService.searchByProductName(size,page,domain,dir,keyword).getTotalPages();
+        int pageCount = BookService.searchByBookName(size,page,domain,dir,keyword).getTotalPages();
         String res = (SecurityContextHolder.getContext().getAuthentication().getName());
         if(res.equals("anonymousUser"))
             res = null;

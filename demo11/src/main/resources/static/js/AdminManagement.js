@@ -1,4 +1,4 @@
-let currentProductId;
+let currentBookId;
 let currentPage;
 let currentCategoryId;
 let currentPageCategory;
@@ -11,31 +11,31 @@ function setCurrentCategoryId(id){
     currentCategoryId = id;
     console.log(currentCategoryId)
 }
-function setCurrentProductId(id){
-    currentProductId = id;
-    console.log(currentProductId)
+function setCurrentBookId(id){
+    currentBookId = id;
+    console.log(currentBookId)
 }
 
-function product(){
-    document.getElementById("product").style.display = "block";
+function Book(){
+    document.getElementById("Book").style.display = "block";
     document.getElementById("category").style.display = "none";
     document.getElementById("user").style.display = "none";
 }
 function category(){
     document.getElementById("category").style.display = "block";
-    document.getElementById("product").style.display = "none";
+    document.getElementById("Book").style.display = "none";
     document.getElementById("user").style.display = "none";
 }
 
 function user(){
     document.getElementById("user").style.display = "block";
     document.getElementById("category").style.display = "none";
-    document.getElementById("product").style.display = "none";
+    document.getElementById("Book").style.display = "none";
 }
 
 
-function deleteProduct(){
-    fetch('http://localhost:8080/product/' + currentProductId, {
+function deleteBook(){
+    fetch('http://localhost:8080/Book/' + currentBookId, {
         method : "delete"
     })
         .then((response) => {
@@ -45,42 +45,42 @@ function deleteProduct(){
             document.getElementById("deleteEmployeeModal").style.display = "none";
             document.querySelector(".modal-backdrop").style.display = "none";
             alert(data.message);
-            loadProduct(currentPage)
+            loadBook(currentPage)
         })
 }
 
 
-function loadProduct(page){
+function loadBook(page){
     currentPage = page;
-    fetch('http://localhost:8080/product/search?page=' + page)
+    fetch('http://localhost:8080/Book/search?page=' + page)
         .then((response) =>{
             return response.json();
         })
         .then((data) => {
             let html = '';
-            for(let product of data.productList){
+            for(let Book of data.bookList){
                 html += `<tr>
                                 <th><span class="custom-checkbox">
                            <input type="checkbox" id="checkbox1" name="option[]" value="1">
                            <label for="checkbox1"></label></th>
-                                <th>${product.productId}</th>
-                                <th>${product.productName}</th>
-                                <th>${product.price}</th>
-                                <th>${product.description}</th>
+                                <th>${Book.bookId}</th>
+                                <th>${Book.bookName}</th>
+                                <th>${Book.price}</th>
+                                <th>${Book.description}</th>
                                 <th>
-                                    <a onclick="setCurrentProductId(${product.productId}); getProductById(${product.productId});" href="#editEmployeeModal" class="edit" data-toggle="modal">
+                                    <a onclick="setCurrentBookId(${Book.bookId}); getBookById(${Book.bookId});" href="#editEmployeeModal" class="edit" data-toggle="modal">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a onclick="setCurrentProductId(${product.productId})" href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                                    <a onclick="setCurrentBookId(${Book.bookId})" href="#deleteEmployeeModal" class="delete" data-toggle="modal">
                                         <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
                                     </a>
                                 </th>
                             </tr>`
             }
-            document.getElementById("listProduct").innerHTML = html;
+            document.getElementById("listBook").innerHTML = html;
             let html2 = '';
             for(let i = 1 ; i <= data.pageCount ; i++){
-                html2 += `<li class="page-item "><a href="javascript:void(0);" onclick="loadProduct(${i})" class="page-link">${i}</a></li>`
+                html2 += `<li class="page-item "><a href="javascript:void(0);" onclick="loadBook(${i})" class="page-link">${i}</a></li>`
             }
             document.getElementById("paging1").innerHTML = html2;
         })
@@ -181,20 +181,20 @@ function getCategoryById(id){
         })
 }
 
-let currentProduct;
+let currentBook;
 
-function getProductById(id){
+function getBookById(id){
     document.getElementById('editError').innerText = '';
-    fetch('http://localhost:8080/product/' + id)
+    fetch('http://localhost:8080/Book/' + id)
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-            currentProduct = data
-            console.log(currentProduct)
-            document.getElementById('editProductName').value = data.productName
+            currentBook = data
+            console.log(currentBook)
+            document.getElementById('editBookName').value = data.BookName
             document.getElementById('editPrice').value = data.price
-            document.getElementById('editProductDescription').value = data.description
+            document.getElementById('editBookDescription').value = data.description
             let option = document.getElementById('editCategorySelection');
             const category = data.category.categoryName;
             console.log(category)
@@ -206,14 +206,14 @@ function getProductById(id){
             }
             const img = document.getElementById('editImg');
             img.setAttribute('src', `${data.image}`);
-            document.getElementById('editProduct').disabled = true;
+            document.getElementById('editBook').disabled = true;
 
         })
 }
 
 function enable(){
     console.log('ok')
-    let myButton = document.getElementById("editProduct");
+    let myButton = document.getElementById("editBook");
     myButton.disabled = false;
 }
 function enable2(){
@@ -223,7 +223,7 @@ function enable2(){
 }
 
 
-loadProduct(1);
+loadBook(1);
 loadCategory(1);
 loadUser(1)
 getAllCategory();

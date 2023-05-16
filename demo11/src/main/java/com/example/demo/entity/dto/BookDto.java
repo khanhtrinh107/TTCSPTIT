@@ -1,6 +1,5 @@
 package com.example.demo.entity.dto;
 
-import com.example.demo.entity.Category;
 import com.example.demo.entity.OrderDetail;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -9,7 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
@@ -17,9 +15,9 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductDto {
+public class BookDto {
     @Length(min = 5 , max = 100)
-    private String productName;
+    private String BookName;
     @Min(0)
     private String price;
     private Date publicationDate;

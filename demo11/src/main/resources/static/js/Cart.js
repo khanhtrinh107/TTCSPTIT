@@ -12,10 +12,10 @@ function loadCart(){
             else{
                 let html = '';
                 for(let cart in data){
-                    html += `<tr id = "cart${data[cart].productId}">
+                    html += `<tr id = "cart${data[cart].bookId}">
                                     <td class="shoping__cart__item">
                                         <img style="height: 90px;" src="${data[cart].image}" alt="">
-                                        <a href="/view/deltail/${data[cart].productId}"><h5>${data[cart].productName}</h5></a>
+                                        <a href="/view/deltail/${data[cart].bookId}"><h5>${data[cart].bookName}</h5></a>
                                     </td>
                                     <td class="shoping__cart__price">
                                         $${data[cart].price}
@@ -23,15 +23,15 @@ function loadCart(){
                                     <td class="shoping__cart__quantity">
                                         <div class="quantity">
                                             <div class="pro-qty">
-                                                <input type="number" min="1"  id = "quantity${data[cart].productId}" onblur="updateCart('${data[cart].productId}', '${data[cart].productName}' , '${data[cart].image}' , '${data[cart].price}')"    value="${data[cart].quantity}">
+                                                <input type="number" min="1"  id = "quantity${data[cart].bookId}" onblur="updateCart('${data[cart].bookId}', '${data[cart].bookName}' , '${data[cart].image}' , '${data[cart].price}')"    value="${data[cart].quantity}">
                                             </div>
                                         </div>
                                     </td>
-                                    <td id = "totalPrice${data[cart].productId}" class="shoping__cart__total">
+                                    <td id = "totalPrice${data[cart].bookId}" class="shoping__cart__total">
                                         $${data[cart].quantity * data[cart].price}
                                     </td>
                                     <td class="shoping__cart__item__close">
-                                        <span onclick="deleteCart(${data[cart].productId})" class="icon_close"></span>
+                                        <span onclick="deleteCart(${data[cart].bookId})" class="icon_close"></span>
                                     </td>
                                 </tr>`
                     console.log(cart)
@@ -51,7 +51,7 @@ function loadCart(){
 }
 
 
-function addToCart(productId,  productName, image,  price,  quantity){
+function addToCart(BookId,  BookName, image,  price,  quantity){
     fetch('http://localhost:8080/cart', {
         method : "post",
         headers: {
@@ -59,8 +59,8 @@ function addToCart(productId,  productName, image,  price,  quantity){
             // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify({
-            "productId" : productId,
-            "productName" : productName,
+            "bookId" : BookId,
+            "bookName" : BookName,
             "image" : image,
             "price" : price,
             "quantity" : quantity
@@ -89,16 +89,16 @@ function displayCart(){
 
 displayCart();
 
-function updateCart(productId , productName , image , price){
-    let count = document.getElementById("quantity" + productId).value;
+function updateCart(BookId , BookName , image , price){
+    let count = document.getElementById("quantity" + BookId).value;
     fetch('http://localhost:8080/cart',{
         method : "put" ,
         headers : {
             "Content-Type" : "application/json"
         },
         body : JSON.stringify({
-            "productId" : productId,
-            "productName" : productName,
+            "bookId" : BookId,
+            "bookName" : BookName,
             "image" : image,
             "price" : price,
             "quantity" : count
@@ -109,7 +109,7 @@ function updateCart(productId , productName , image , price){
         })
         .then((data) => {
             let tmp = count * price
-            document.getElementById("totalPrice" + productId).innerText = '$' +  tmp.toString()
+            document.getElementById("totalPrice" + BookId).innerText = '$' +  tmp.toString()
             fetch('http://localhost:8080/cart/display')
                 .then((response) => {
                     return response.json()

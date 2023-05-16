@@ -114,8 +114,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> findUserBuyProduct() {
-        return userRepository.findUserBuyProduct();
+    public List<User> findUserBuyBook() {
+        return userRepository.findUserBuyBook();
     }
 
     @Override

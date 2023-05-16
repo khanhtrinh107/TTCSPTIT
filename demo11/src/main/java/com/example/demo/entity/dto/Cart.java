@@ -13,16 +13,13 @@ import lombok.NoArgsConstructor;
 public class Cart {
     @NotNull(message = "id should not be null!" )
     @NotBlank(message = "id should not be blank!")
-    private Integer productId;
+    private Integer bookId;
     @NotNull(message = "id should not be null!" )
     @NotBlank(message = "id should not be blank!")
-    private String productName;
+    private String bookName;
     private String image;
     @Min(0)
     private float price;
     @Min(0)
     private int quantity;
-
-
-
 }

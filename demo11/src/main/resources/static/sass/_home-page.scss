@@ -199,14 +199,14 @@
 }
 
 /*---------------------
-  Latest Product
+  Latest Book
 -----------------------*/
-.latest-product {
+.latest-Book {
     padding-top: 80px;
     padding-bottom: 0;
 }
 
-.latest-product__text {
+.latest-Book__text {
 
     h4 {
         font-weight: 700;
@@ -215,7 +215,7 @@
     }
 }
 
-.latest-product__slider {
+.latest-Book__slider {
 
     &.owl-carousel {
 
@@ -247,13 +247,13 @@
     }
 }
 
-.latest-product__item {
+.latest-Book__item {
     margin-bottom: 20px;
     overflow: hidden;
     display: block;
 }
 
-.latest-product__item__pic {
+.latest-Book__item__pic {
     float: left;
     margin-right: 26px;
 
@@ -263,7 +263,7 @@
     }
 }
 
-.latest-product__item__text {
+.latest-Book__item__text {
     overflow: hidden;
     padding-top: 10px;
 

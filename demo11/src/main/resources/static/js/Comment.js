@@ -1,5 +1,5 @@
-function getCommentByProductId(id){
-    fetch('http://localhost:8080/comment?productId=' + id)
+function getCommentByBookId(id){
+    fetch('http://localhost:8080/comment?BookId=' + id)
         .then((response) => {
             return response.json()
         })
@@ -31,7 +31,7 @@ function getCommentByProductId(id){
         })
 }
 
-function addComment( productId , userId){
+function addComment( BookId , userId){
     if(userId === 'null'){
         window.location.href = '/login'
     }
@@ -44,7 +44,7 @@ function addComment( productId , userId){
             },
             body : JSON.stringify({
                 "content" : content,
-                "productId" : productId,
+                "BookId" : BookId,
                 "userId" : userId
             })
         })

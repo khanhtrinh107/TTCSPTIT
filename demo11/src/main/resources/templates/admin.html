@@ -42,7 +42,7 @@
         </div>
         <ul class="list-unstyled component m-0">
             <li class="active">
-                <a href="javascript:void(0)" onclick="product()" class="dashboard"><i class="material-icons">dashboard</i>dashboard </a>
+                <a href="javascript:void(0)" onclick="Book()" class="dashboard"><i class="material-icons">dashboard</i>dashboard </a>
             </li>
 
             <li class="dropdown">
@@ -51,7 +51,7 @@
                     <i class="material-icons">aspect_ratio</i>Layouts
                 </a>
                 <ul class="collapse list-unstyled menu" id="homeSubmenu1">
-                    <li><a href="javascript:void(0)" onclick="product()"  id = "productManagement" >Manage Product</a></li>
+                    <li><a href="javascript:void(0)" onclick="Book()"  id = "BookManagement" >Manage Book</a></li>
                     <li><a href="javascript:void(0)" onclick="category()"  id = "categoryManagement">Manage Category</a></li>
                     <li><a href="javascript:void(0)" onclick="user()"  id = "userManagement" >Manage User</a></li>
                 </ul>
@@ -246,7 +246,7 @@
 
         <!------main-content-start----------->
 
-        <div id="product" class="main-content">
+        <div id="Book" class="main-content">
             <div class="row">
                 <div class="col-md-12">
                     <div class="table-wrapper">
@@ -254,12 +254,12 @@
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
-                                    <h2 class="ml-lg-2">Manage  Product</h2>
+                                    <h2 class="ml-lg-2">Manage  Book</h2>
                                 </div>
                                 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
                                     <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
                                         <i class="material-icons">&#xE147;</i>
-                                        <span>Add New Product</span>
+                                        <span>Add New Book</span>
                                     </a>
                                     <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
                                         <i class="material-icons">&#xE15C;</i>
@@ -283,7 +283,7 @@
                             </tr>
                             </thead>
 
-                            <tbody id = "listProduct">
+                            <tbody id = "listBook">
 
 
 
@@ -317,7 +317,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Add Product</h5>
+                                <h5 class="modal-title">Add Book</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -328,7 +328,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Name</label>
-                                            <input type="text" id = "productName" class="form-control" required>
+                                            <input type="text" id = "BookName" class="form-control" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Price</label>
@@ -336,7 +336,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Description</label>
-                                            <textarea class="form-control" id = "productDescription" required></textarea>
+                                            <textarea class="form-control" id = "BookDescription" required></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label>Author</label>
@@ -370,7 +370,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button id = "addProduct" type="submit" class="btn btn-success">Add</button>
+                                <button id = "addBook" type="submit" class="btn btn-success">Add</button>
                             </div>
                         </div>
                     </div>
@@ -387,7 +387,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Edit Product</h5>
+                                <h5 class="modal-title">Edit Book</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -398,7 +398,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Name</label>
-                                            <input  th:oninput="'enable()'"  type="text" id = "editProductName" class="form-control" required>
+                                            <input  th:oninput="'enable()'"  type="text" id = "editBookName" class="form-control" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Price</label>
@@ -406,7 +406,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Description</label>
-                                            <textarea  th:oninput="'enable()'"  class="form-control" id = "editProductDescription" required></textarea>
+                                            <textarea  th:oninput="'enable()'"  class="form-control" id = "editBookDescription" required></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label>Category</label>
@@ -432,7 +432,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button id = "editProduct" type="submit"  class="btn btn-success">Save</button>
+                                <button id = "editBook" type="submit"  class="btn btn-success">Save</button>
                             </div>
                         </div>
                     </div>
@@ -446,18 +446,18 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Delete Product</h5>
+                                <h5 class="modal-title">Delete Book</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <p>Are you sure you want to delete this product</p>
+                                <p>Are you sure you want to delete this Book</p>
                                 <p class="text-warning"><small>this action Cannot be Undone,</small></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" th:onclick="'deleteProduct()'" class="btn btn-success">Delete</button>
+                                <button type="button" th:onclick="'deleteBook()'" class="btn btn-success">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -859,25 +859,25 @@
 
 
 <script>
-    document.getElementById('addProduct').addEventListener('click' , (e) => {
+    document.getElementById('addBook').addEventListener('click' , (e) => {
         e.preventDefault();
-        const productName = document.getElementById("productName").value;
+        const BookName = document.getElementById("BookName").value;
         const price = document.getElementById("price").value;
-        const description = document.getElementById("productDescription").value;
+        const description = document.getElementById("BookDescription").value;
         const select = document.getElementById('categorySelection');
         const category = select.options[select.selectedIndex].value;
         const image = document.getElementById("uploadImg").files[0];
         const publicationDate = document.getElementById("publicationDate").value
         const author = document.getElementById("author").value
         const formData = new FormData();
-        formData.append('productName',productName);
+        formData.append('BookName',BookName);
         formData.append('price',price);
         formData.append('category',category);
         formData.append('description',description);
         formData.append('image' , image);
         formData.append('publicationDate' , publicationDate);
         formData.append('author' , author);
-        fetch('http://localhost:8080/product', {
+        fetch('http://localhost:8080/Book', {
             method : "post" ,
             body : formData
         })
@@ -885,7 +885,7 @@
                 return response.json();
             })
             .then((data) => {
-                if(data.productId === undefined){
+                if(data.BookId === undefined){
                     document.getElementById("error").innerText = data.message;
                 }
                 else{
@@ -893,9 +893,9 @@
                     document.getElementById("error").innerText = '';
                     document.getElementById("addEmployeeModal").style.display = "none";
                     document.querySelector(".modal-backdrop").style.display = "none";
-                    document.getElementById("productName").value = '';
+                    document.getElementById("BookName").value = '';
                     document.getElementById("price").value = '';
-                    document.getElementById("productDescription").value = '';
+                    document.getElementById("BookDescription").value = '';
                     document.getElementById("categorySelection").value = '';
                     document.getElementById("img").style.display = "none";
                     document.getElementById("publicationDate").value = '';
@@ -906,42 +906,42 @@
 </script>
 
 <script>
-    document.getElementById('editProduct').addEventListener('click' , (e) => {
+    document.getElementById('editBook').addEventListener('click' , (e) => {
         e.preventDefault();
         const formData = new FormData();
-        let productName = document.getElementById('editProductName').value;
+        let BookName = document.getElementById('editBookName').value;
         let price = document.getElementById('editPrice').value;
-        let description = document.getElementById('editProductDescription').value;
+        let description = document.getElementById('editBookDescription').value;
         const select = document.getElementById('editCategorySelection');
         const cate = select.options[select.selectedIndex].value;
         const image = document.getElementById("editUploadImg").files[0];
         console.log(image)
-        if(currentProduct.productName !== productName){
-            formData.append('productName',productName);
+        if(currentBook.BookName !== BookName){
+            formData.append('BookName',BookName);
         }
-        if(currentProduct.price !== price){
+        if(currentBook.price !== price){
             formData.append('price',price);
         }
-        if(currentProduct.category.categoryName !== cate){
+        if(currentBook.category.categoryName !== cate){
             formData.append('category',cate);
         }
-        if(currentProduct.description !== description){
+        if(currentBook.description !== description){
             formData.append('description',description);
         }
         if(image !== undefined){
             formData.append('image' , image);
         }
         console.log(formData)
-        fetch('http://localhost:8080/product/' + currentProductId , {
+        fetch('http://localhost:8080/Book/' + currentBookId , {
             method : "PUT",
             body : formData
         }).then((response) => {
             return response.json();
         }).then((data) => {
-            if(data.productId !== undefined){
+            if(data.BookId !== undefined){
                 document.getElementById("editEmployeeModal").style.display = "none";
                 document.querySelector(".modal-backdrop").style.display = "none";
-                loadProduct(currentPage)
+                loadBook(currentPage)
             }
             else{
                 document.getElementById('editError').innerText = data.message;

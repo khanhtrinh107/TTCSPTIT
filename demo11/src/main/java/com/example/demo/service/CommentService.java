@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface CommentService {
     Comment findById(int id) throws UserNotFoundException;
-    List<Comment> findByProduct(int productId);
+    List<Comment> findByBook(int BookId);
     List<Comment> findByUser(int userId);
 
     Comment update(CommentDto commentDto , int id) throws UserNotFoundException;

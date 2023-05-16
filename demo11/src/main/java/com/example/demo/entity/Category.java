@@ -23,5 +23,5 @@ public class Category {
     private String description;
     @OneToMany(mappedBy =  "category"  , cascade = CascadeType.ALL)
     @JsonIgnore
-    private Set<Product> products;
+    private Set<Book> Books;
 }

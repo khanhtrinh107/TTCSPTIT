@@ -64,7 +64,7 @@
 }
 
 .blog__pagination {
-    @extend .product__pagination;
+    @extend .Book__pagination;
     padding-top: 5px;
     position: relative;
 

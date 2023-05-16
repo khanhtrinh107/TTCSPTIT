@@ -24,7 +24,5 @@ public class SaleOrder {
     @OneToMany(mappedBy = "saleOrder" , cascade = CascadeType.ALL)
     private Set<OrderDetail> orderDetails;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "voucher_id")
-    private Voucher voucher;
+
 }

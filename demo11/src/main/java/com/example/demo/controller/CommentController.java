@@ -17,8 +17,8 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
     @GetMapping
-    public ResponseEntity<?> getCommentForProduct(@RequestParam(name = "productId") int productId ){
-        return new ResponseEntity<>(commentService.findByProduct(productId), HttpStatus.OK);
+    public ResponseEntity<?> getCommentForBook(@RequestParam(name = "BookId") int BookId ){
+        return new ResponseEntity<>(commentService.findByBook(BookId), HttpStatus.OK);
     }
     @PostMapping
     @PreAuthorize("isAuthenticated()")

@@ -1,11 +1,11 @@
 /*---------------------
   Shop Details
 -----------------------*/
-.product-details {
+.Book-details {
     padding-top: 80px;
 }
 
-.product__details__pic__item {
+.Book__details__pic__item {
     margin-bottom: 20px;
 
     img {
@@ -13,7 +13,7 @@
     }
 }
 
-.product__details__pic__slider {
+.Book__details__pic__slider {
 
     img {
         cursor: pointer;
@@ -24,7 +24,7 @@
     }
 }
 
-.product__details__text {
+.Book__details__text {
 
     h3 {
         color: $heading-color-2;
@@ -32,7 +32,7 @@
         margin-bottom: 16px;
     }
 
-    .product__details__rating {
+    .Book__details__rating {
         font-size: 14px;
         margin-bottom: 12px;
 
@@ -47,7 +47,7 @@
         }
     }
 
-    .product__details__price {
+    .Book__details__price {
         font-size: 30px;
         color: #dd2222;
         font-weight: 600;
@@ -114,7 +114,7 @@
     }
 }
 
-.product__details__quantity {
+.Book__details__quantity {
     display: inline-block;
     margin-right: 6px;
 }
@@ -148,7 +148,7 @@
     }
 }
 
-.product__details__tab {
+.Book__details__tab {
     padding-top: 85px;
 
     .nav-tabs {
@@ -196,7 +196,7 @@
         }
     }
 
-    .product__details__tab__desc {
+    .Book__details__tab__desc {
         padding-top: 44px;
 
         h6 {
@@ -214,10 +214,10 @@
 /*---------------------
   Shop Details
 -----------------------*/
-.related-product {
+.related-Book {
     padding-bottom: 30px;
 }
 
-.related__product__title {
+.related__Book__title {
     margin-bottom: 70px;
 }

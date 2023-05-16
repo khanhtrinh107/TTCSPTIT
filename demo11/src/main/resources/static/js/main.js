@@ -101,9 +101,9 @@
     });
 
     /*--------------------------
-        Latest Product Slider
+        Latest Book Slider
     ----------------------------*/
-    $(".latest-product__slider").owlCarousel({
+    $(".latest-Book__slider").owlCarousel({
         loop: true,
         margin: 0,
         items: 1,
@@ -116,9 +116,9 @@
     });
 
     /*-----------------------------
-        Product Discount Slider
+        Book Discount Slider
     -------------------------------*/
-    $(".product__discount__slider").owlCarousel({
+    $(".Book__discount__slider").owlCarousel({
         loop: true,
         margin: 0,
         items: 3,
@@ -147,9 +147,9 @@
     });
 
     /*---------------------------------
-        Product Details Pic Slider
+        Book Details Pic Slider
     ----------------------------------*/
-    $(".product__details__pic__slider").owlCarousel({
+    $(".Book__details__pic__slider").owlCarousel({
         loop: true,
         margin: 20,
         items: 4,
@@ -186,14 +186,14 @@
     $("select").niceSelect();
 
     /*------------------
-		Single Product
+		Single Book
 	--------------------*/
-    $('.product__details__pic__slider img').on('click', function () {
+    $('.Book__details__pic__slider img').on('click', function () {
 
         var imgurl = $(this).data('imgbigurl');
-        var bigImg = $('.product__details__pic__item--large').attr('src');
+        var bigImg = $('.Book__details__pic__item--large').attr('src');
         if (imgurl != bigImg) {
-            $('.product__details__pic__item--large').attr({
+            $('.Book__details__pic__item--large').attr({
                 src: imgurl
             });
         }

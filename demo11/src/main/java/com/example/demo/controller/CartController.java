@@ -25,15 +25,15 @@ public class CartController {
     @PostMapping("/cart")
     public ResponseEntity<?> AddToCart(@RequestBody  Cart cart , HttpSession session){
         Map<Integer,Cart> cartMap = (Map<Integer, Cart>) session.getAttribute("cart");
-        int productId = cart.getProductId();
+        int BookId = cart.getBookId();
         if(cartMap == null)
             cartMap = new HashMap<>();
-        if(cartMap.containsKey(productId)){
-            Cart c = cartMap.get(productId);
+        if(cartMap.containsKey(BookId)){
+            Cart c = cartMap.get(BookId);
             c.setQuantity(c.getQuantity() + 1);
         }
         else{
-            cartMap.put(productId , cart);
+            cartMap.put(BookId , cart);
         }
         session.setAttribute("cart" , cartMap);
         return new ResponseEntity<>(utils.aggregate(cartMap),HttpStatus.OK);
@@ -61,9 +61,9 @@ public class CartController {
     @PutMapping("/cart")
     public ResponseEntity<?> updateCart(@RequestBody   Cart cart , HttpSession session){
         Map<Integer,Cart> cartMap = (Map<Integer, Cart>) session.getAttribute("cart");
-        Cart c = cartMap.get(cart.getProductId());
+        Cart c = cartMap.get(cart.getBookId());
         c.setQuantity(cart.getQuantity());
-        cartMap.put(cart.getProductId(), cart);
+        cartMap.put(cart.getBookId(), cart);
         session.setAttribute("cart" , cartMap);
         return new ResponseEntity<>(new CartMessage("Cap Nhat Thanh Cong") , HttpStatus.OK);
     }
@@ -82,7 +82,7 @@ public class CartController {
     public ResponseEntity<?> payment(HttpSession session , @RequestParam(name = "id") int id , @RequestParam(name = "voucher" , required = false , defaultValue = "") String voucher){
         Map<Integer,Cart> cartMap = (Map<Integer, Cart>) session.getAttribute("cart");
         if(cartMap != null){
-            boolean check = saleOrderService.addOrder(cartMap , id , voucher);
+            boolean check = saleOrderService.addOrder(cartMap , id );
             if(check == true){
                 session.removeAttribute("cart");
                 return new ResponseEntity<>(new CartMessage("Pay Successful!"), HttpStatus.OK);
