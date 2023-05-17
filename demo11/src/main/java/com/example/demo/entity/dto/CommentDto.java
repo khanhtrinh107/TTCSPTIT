@@ -16,8 +16,6 @@ public class CommentDto {
     @NotBlank(message = "content should not be blank!")
     @NotNull(message = "content should not be null!")
     private String content;
-    @Min(1)
     private int  BookId;
-    @Min(1)
     private int userId;
 }

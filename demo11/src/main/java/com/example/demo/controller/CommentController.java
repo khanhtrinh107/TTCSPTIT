@@ -21,7 +21,7 @@ public class CommentController {
         return new ResponseEntity<>(commentService.findByBook(BookId), HttpStatus.OK);
     }
     @PostMapping
-    @PreAuthorize("isAuthenticated()")
+//    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<?> addComment(@RequestBody @Valid CommentDto commentDto) throws UserNotFoundException {
         return new ResponseEntity<>(commentService.addComment(commentDto),HttpStatus.CREATED);
     }

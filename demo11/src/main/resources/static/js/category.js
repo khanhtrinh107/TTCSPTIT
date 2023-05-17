@@ -20,7 +20,7 @@ function getBookByCategory(id){
         })
         .then((data) => {
             let html =''
-            for(let Book of data.BookList){
+            for(let Book of data.bookList){
                 html += `<div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="Book__item">
                                 <div class="Book__item__pic set-bg" data-setbg="${Book.image}">
@@ -28,11 +28,11 @@ function getBookByCategory(id){
                                     <ul class="Book__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a  onclick="addToCart('${Book.BookId}', '${Book.BookName}',${Book.image}, '${Book.price}', 1);" href="javascript:void(0);" ><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a  onclick="addToCart('${Book.bookId}', '${Book.bookName}',${Book.image}, '${Book.price}', 1);" href="javascript:void(0);" ><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="Book__item__text">
-                                    <h6><a href="deltail/${Book.BookId}">${Book.BookName}</a></h6>
+                                    <h6><a href="deltail/${Book.bookId}">${Book.bookName}</a></h6>
                                     <h5>$${Book.price}</h5>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ function paging2(categoryId , page){
         })
         .then((data) => {
             let html =''
-            for(let Book of data.BookList){
+            for(let Book of data.bookList){
                 html += `<div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="Book__item">
                                 <div class="Book__item__pic set-bg" data-setbg="${Book.image}">

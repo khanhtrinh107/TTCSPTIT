@@ -17,8 +17,8 @@ function search(keyword) {
             return response.json()
         })
         .then((data) => {
-            console.log(data.BookList)
-            render(data.BookList)
+            console.log(data.bookList)
+            render(data.bookList)
             // let html = '';
             // for(let i = 1 ; i <= data.pageCount ; i++){
             //     html += `<a href="javascript:void(0);" onclick="paging4(${i},keyword)"  >${i}</a>`
@@ -34,7 +34,7 @@ function paging4(count, keyword) {
         .then((data) => {
             let BookBlock = document.getElementById("Book2")
             let html = ''
-            for (let Book of data.BookList) {
+            for (let Book of data.bookList) {
                 html += `<div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="Book__item">
                                 <div class="Book__item__pic set-bg" data-setbg="${Book.image}">
@@ -63,7 +63,7 @@ function paging(count) {
             return response.json()
         })
         .then((data) => {
-            render(data.BookList)
+            render(data.bookList)
         })
 }
 
